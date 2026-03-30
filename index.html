@@ -12,40 +12,41 @@
 \
   <style>\
     body \{\
-      background-color: #111;\
-      color: white;\
-      font-family: Arial;\
+      background-color: black;\
+      color: #00ff00;\
+      font-family: monospace;\
       text-align: center;\
     \}\
 \
     h1 \{\
-      color: lime;\
+      font-size: 40px;\
     \}\
 \
     .games \{\
       display: flex;\
-      justify-content: center;\
       flex-wrap: wrap;\
+      justify-content: center;\
     \}\
 \
     .card \{\
-      background: #222;\
+      background: #001a00;\
+      border: 1px solid #00ff00;\
       margin: 15px;\
       padding: 15px;\
       border-radius: 10px;\
-      width: 200px;\
+      width: 180px;\
       cursor: pointer;\
       transition: 0.2s;\
     \}\
 \
     .card:hover \{\
-      background: #333;\
-      transform: scale(1.05);\
+      background: #003300;\
+      transform: scale(1.08);\
     \}\
 \
     iframe \{\
       margin-top: 20px;\
-      border: 2px solid white;\
+      border: 2px solid #00ff00;\
       border-radius: 10px;\
     \}\
   </style>\
@@ -53,29 +54,49 @@
 \
 <body>\
 \
-  <h1>\uc0\u55356 \u57262  My Game Hub</h1>\
-  <p>Click a game to play!</p>\
+  <h1>\uc0\u55357 \u57314  My Game Hub</h1>\
+  <p>Click a game to play</p>\
 \
   <div class="games">\
-    \
+\
     <div class="card" onclick="loadGame('https://idev.games/embed/links-puzzle')">\
-      <h3>Puzzle Game</h3>\
+      <h3>Puzzle</h3>\
     </div>\
 \
     <div class="card" onclick="loadGame('https://www.madkidgames.com/full/subway-princess-runner')">\
-      <h3>Runner Game</h3>\
+      <h3>Runner</h3>\
     </div>\
 \
     <div class="card" onclick="loadGame('https://www.madkidgames.com/full/mountain-climb-4x4')">\
-      <h3>Car Game</h3>\
+      <h3>Car</h3>\
     </div>\
 \
     <div class="card" onclick="loadGame('https://www.madkidgames.com/full/avalon-jewels-match-3')">\
-      <h3>Match Game</h3>\
+      <h3>Match</h3>\
     </div>\
 \
     <div class="card" onclick="loadGame('https://www.madkidgames.com/full/red-hero-2')">\
-      <h3>Arcade Game</h3>\
+      <h3>Arcade</h3>\
+    </div>\
+\
+    <div class="card" onclick="loadGame('https://idev.games/embed/tower-defense')">\
+      <h3>Tower Defense</h3>\
+    </div>\
+\
+    <div class="card" onclick="loadGame('https://idev.games/embed/snake')">\
+      <h3>Snake</h3>\
+    </div>\
+\
+    <div class="card" onclick="loadGame('https://idev.games/embed/tetris')">\
+      <h3>Tetris</h3>\
+    </div>\
+\
+    <div class="card" onclick="loadGame('https://idev.games/embed/breakout')">\
+      <h3>Breakout</h3>\
+    </div>\
+\
+    <div class="card" onclick="loadGame('https://idev.games/embed/flappy-bird')">\
+      <h3>Flappy</h3>\
     </div>\
 \
   </div>\
