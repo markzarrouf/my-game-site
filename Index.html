@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hacker Hub</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background: black;
+    color: #00ff00;
+}
+
+header {
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid #00ff00;
+}
+
+#games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #00ff00;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background: #003300;
+}
+
+#player {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+#frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>HACKER GAME HUB</header>
+
+<div id="games">
+
+<div class="card" onclick="openGame('https://playtetris.com/')">TETRIS</div>
+<div class="card" onclick="openGame('https://www.google.com/logos/2010/pacman10-i.html')">PACMAN</div>
+<div class="card" onclick="openGame('https://snake.io/')">SNAKE</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/2048')">2048</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/run-3')">RUN 3</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/slope')">SLOPE</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/tunnel-rush')">TUNNEL RUSH</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/drift-boss')">DRIFT BOSS</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/stack')">STACK</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/stickman-hook')">STICKMAN HOOK</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/ovo')">OVO</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/moto-x3m')">MOTO X3M</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/idle-breakout')">IDLE BREAKOUT</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/basket-random')">BASKET RANDOM</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/soccer-random')">SOCCER RANDOM</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/retro-bowl')">RETRO BOWL</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/paper-io-2')">PAPER.IO 2</div>
+<div class="card" onclick="openGame('https://www.crazygames.com/embed/shell-shockers')">SHELL SHOCKERS</div>
+
+<!-- Minecraft placeholder -->
+<div class="card" onclick="openGame('minecraft/index.html')">MINECRAFT</div>
+
+</div>
+
+<div id="player">
+    <button id="closeBtn" onclick="closeGame()">EXIT</button>
+    <iframe id="frame"></iframe>
+</div>
+
+<script>
+function openGame(url) {
+    document.getElementById("player").style.display = "block";
+    document.getElementById("frame").src = url;
+}
+
+function closeGame() {
+    document.getElementById("player").style.display = "none";
+    document.getElementById("frame").src = "";
+}
+</script>
+
+</body>
+</html>
